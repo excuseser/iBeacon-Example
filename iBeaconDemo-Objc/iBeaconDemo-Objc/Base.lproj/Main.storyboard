@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A1d-YI-SXJ">
+                                <rect key="frame" x="-4" y="20" width="383" height="527"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Khq-yz-rVO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ghx-U5-LOA"/>
+                                </connections>
+                            </tableView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Ld-Mk-iwq">
+                                <rect key="frame" x="136" y="586" width="51" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="switchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="nUO-R0-7bS"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iBeacon 扫描" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sM0-1a-py8">
+                                <rect key="frame" x="16" y="591" width="100" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A1d-YI-SXJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="0An-Is-F7p"/>
+                            <constraint firstItem="6Ld-Mk-iwq" firstAttribute="leading" secondItem="sM0-1a-py8" secondAttribute="trailing" constant="20" id="A9Z-rY-tGv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="A1d-YI-SXJ" secondAttribute="bottom" constant="120" id="JAl-g2-rIb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A1d-YI-SXJ" secondAttribute="trailing" constant="-20" id="Lji-QC-BJ8"/>
+                            <constraint firstItem="6Ld-Mk-iwq" firstAttribute="centerY" secondItem="sM0-1a-py8" secondAttribute="centerY" id="bed-uV-Qb1"/>
+                            <constraint firstItem="sM0-1a-py8" firstAttribute="top" secondItem="A1d-YI-SXJ" secondAttribute="bottom" constant="44" id="cGp-bf-rAA"/>
+                            <constraint firstItem="sM0-1a-py8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dBJ-gC-rAb"/>
+                            <constraint firstItem="A1d-YI-SXJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mef-9E-k0D"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="iBeaconSwitch" destination="6Ld-Mk-iwq" id="tAX-ul-hQm"/>
+                        <outlet property="listTable" destination="A1d-YI-SXJ" id="mrT-VQ-RM2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434.5" y="334.5"/>
+        </scene>
+    </scenes>
+</document>
